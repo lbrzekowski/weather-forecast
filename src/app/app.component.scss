@@ -1,0 +1,26 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to bottom right, $cyan-500, $cyan-100);
+
+  .content {
+    padding: 0 16px;
+  }
+
+  .header {
+    .title {
+      color: white;
+      text-align: center;
+      font-size: 4rem;
+      font-weight: bold;
+      letter-spacing: 0.3rem;
+      padding: 3rem;
+      margin: 3rem;
+    }
+  }
+}

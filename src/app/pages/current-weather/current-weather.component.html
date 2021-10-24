@@ -1,0 +1,6 @@
+<h3 class="subtitle">For 5 European cities</h3>
+<div class="cities-content">
+  <div *ngFor="let cityId of cityIds">
+    <app-city-basic-info [cityId]="cityId"></app-city-basic-info>
+  </div>
+</div>

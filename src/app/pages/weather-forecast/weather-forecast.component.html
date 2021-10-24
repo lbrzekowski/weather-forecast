@@ -1,0 +1,21 @@
+<div class="forecast">
+  <div class="header">
+    <div><h2>{{cityName}}</h2></div>
+    <div><a role="link" routerLink="/">go back</a></div>
+  </div>
+  <div class="hourly-content" *ngIf="cityForecast$ | async as cityForecast; else loadingOrError">
+    <div class="" *ngFor="let hourlyForecast of cityForecast">
+      <app-hourly-forecast [hourlyInfo]="hourlyForecast"></app-hourly-forecast>
+    </div>
+  </div>
+</div>
+<ng-template #loadingOrError>
+  <div class="error">
+    <ng-container *ngIf="error; else loading">
+      Could not load data
+    </ng-container>
+    <ng-template #loading>
+      Loading...
+    </ng-template>
+  </div>
+</ng-template>

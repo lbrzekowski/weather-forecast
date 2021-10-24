@@ -1,0 +1,19 @@
+<div class="card shadow">
+  <div class="row">
+    <div class="col">
+      <h2 class="title">{{hourlyInfo.dt | date: 'HH:mm'}}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div>Temperature</div>
+      <div class="weather-value">{{hourlyInfo.temp | number: '1.1-1'}}°C</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div>Wind speed</div>
+      <div class="weather-value">{{hourlyInfo.wind_speed | number: '1.1-1'}} <span>m/s</span></div>
+    </div>
+  </div>
+</div>

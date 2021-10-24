@@ -1,0 +1,34 @@
+<div class="card shadow">
+  <div *ngIf="cityInfo$ | async as cityInfo; else loadingOrError">
+    <div class="row">
+      <div class="col">
+        <h2 class="title">{{cityInfo.name}}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div>Temperature</div>
+        <div class="weather-value">{{cityInfo.temp | number: '1.1-1'}}°C</div>
+      </div>
+      <div class="col-6">
+        <div>Wind speed</div>
+        <div class="weather-value">{{cityInfo.windSpeed | number: '1.1-1'}} <span>m/s</span></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col forecast-link">
+        <a role="link" [routerLink]="['/forecast', cityInfo.coord.lat, cityInfo.coord.lon, cityInfo.name]">See detailed forecast 🠖</a>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #loadingOrError>
+  <div>
+    <ng-container *ngIf="error; else loading">
+      Could not load data
+    </ng-container>
+    <ng-template #loading>
+      Loading...
+    </ng-template>
+  </div>
+</ng-template>

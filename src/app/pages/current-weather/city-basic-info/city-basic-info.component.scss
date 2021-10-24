@@ -1,0 +1,40 @@
+@import  'node_modules/bootstrap/scss/functions';
+@import  "node_modules/bootstrap/scss/variables";
+.card {
+  background-color: $cyan-100;
+  padding: 8px 8px;
+  margin: 8px 8px;
+  border-radius: 8px;
+  min-width: 300px;
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > div {
+    width: 100%;
+  }
+
+  .title {
+    padding-top: 4px;
+    padding-bottom: 16px;
+  }
+
+  .weather-value {
+    font-size: 2rem;
+
+    & > span {
+      font-size: 1rem;
+    }
+  }
+
+  .forecast-link {
+    text-align: right;
+    padding-top: 16px;
+    padding-right: 30px;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

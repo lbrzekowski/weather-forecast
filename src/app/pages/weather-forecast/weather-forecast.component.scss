@@ -1,0 +1,15 @@
+.forecast {
+  min-width: 400px;
+  text-align: center;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 16px;
+  }
+
+  .hourly-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
